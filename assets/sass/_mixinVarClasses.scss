@@ -1,0 +1,186 @@
+// var
+$colorwhite: #fff;
+$mainColor: #bd9a5f;
+$minBgColor: #262a3a;
+$mainBColor2lighter: #1c1f2a;
+
+@mixin BTNMain($minWidth, $letterSpace) {
+  &:hover {
+    background-color: $mainColor;
+    color: $colorwhite;
+    transition: 0.75s;
+  }
+  font-size: 16px;
+  border: 1px solid #bd9a5f;
+  color: $colorwhite;
+  padding: 15px 35px;
+  font-family: "Regular";
+  display: inline-block;
+  text-decoration: none;
+  min-width: $minWidth;
+  letter-spacing: $letterSpace;
+}
+.headingTitle {
+  font-size: 40px;
+  color: $colorwhite;
+  font-family: "Medium";
+  margin: 0;
+}
+.subTitle {
+  font-size: 23px;
+  color: $mainColor;
+  font-family: "light";
+  margin: 0;
+}
+.textPra {
+  font-size: 18px;
+  line-height: 1.5;
+  color: $colorwhite;
+  font-family: "Regular";
+  margin: 0;
+}
+.readMoreBtn {
+  font-size: 16px;
+  font-family: "light";
+  color: $colorwhite;
+  margin: 0;
+  text-decoration: unset;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 1px;
+    background-color: $mainColor;
+    bottom: -1px;
+    left: 0;
+  }
+  &:hover {
+    color: $mainColor;
+    transition: 0.75s;
+    &::after {
+      width: 100%;
+      transition: 0.75s;
+    }
+    i {
+      padding-left: 20px;
+      transition: 0.75s;
+    }
+  }
+  i {
+    color: $mainColor;
+    padding-left: 15px;
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    opacity: 0;
+    transform: translate(0, -10px);
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 2px);
+    opacity: 0;
+  }
+}
+
+@keyframes circles {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+}
+
+
+@keyframes myship {
+  from {
+    position: absolute;
+    top: 400px;
+    left: 461px;
+  }
+  to {
+    position: absolute;
+    top: 40px;
+    left: 84px;
+    background-color: transparent;
+  }
+}
+@keyframes myship2 {
+  from {
+    position: absolute;
+    top: 400px;
+    left: 1225px;
+  }
+  to {
+    position: absolute;
+    top: 40px;
+    left: 84px;
+    background-color: transparent;
+  }
+}
+@keyframes myship3 {
+  from {
+    position: absolute;
+    top: 630px;
+    left: 600px;
+  }
+  to {
+    position: absolute;
+    top: 40px;
+    left: 84px;
+    background-color: transparent;
+  }
+}
+@keyframes myshipMob {
+  from {
+    position: absolute;
+    top: 630px;
+    left: 0;
+  }
+  to {
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    background-color: transparent;
+  }
+}
+@keyframes selector {
+  0% {
+    height: 10%;
+    width: 14%;
+    margin: 0 auto;
+    border-radius: 70%;
+    overflow: hidden;
+    transform-style: preserve-3d;
+  }
+  50% {
+    transform: scale(1.2);
+    transform-style: preserve-3d;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    margin: unset;
+    border-radius: unset;
+    overflow: unset;
+    transform-style: preserve-3d;
+    transform: unset;
+  }
+}

@@ -1,0 +1,162 @@
+.headerWithVid{
+
+}
+
+.headerWithVid .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.headerWithVid .hamburger {
+    display: none;
+}
+
+.headerWithVid .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: $mainColor;
+}
+.headerWithVid .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    
+}
+.stickyScroll{
+    box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.5);
+}
+.headerWithVid .nav-item {
+     margin-left: 41px;
+}
+.headerWithVid .fastLink a,
+.headerWithVid .nav-link{
+    font-size: 14px;
+    font-family: 'Medium';
+    color: #fff;
+    padding: 0;
+    border-bottom: 1px solid #ffffff00;
+    padding-bottom: 25px;
+    text-decoration: none;
+    transition: .75s;
+}
+.headerWithVid .fastLink a:hover,
+.headerWithVid .nav-link:hover{
+
+    border-bottom: 1px solid #bd9a5f;
+    text-decoration: none;
+}
+
+.headerWithVid .nav-logo img{
+    height: 89px;
+}
+.headerWithVid .fastLink {
+    display: flex;
+    margin: 0;
+    // margin-top: -22px;
+}
+.headerWithVid .nav-item:first-of-type{
+    margin-left: 0;
+}
+.nav-menu {
+    position: relative;
+}
+
+.nav-menu::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background: #0000001c;
+    width: 164%;
+    bottom: 0px;
+    left: 0;
+}
+.headerWithVid .fastLink > li:first-of-type {
+    margin-right: 33px;
+}
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
+  }
+  .stickyScroll {
+    background: #1C1F2A;
+    .nav-logo img {
+        height: 60px;
+    }
+    .fastLink a,
+    .nav-link {
+        padding-bottom: 0;
+        transition: unset;
+    }
+    .fastLink {
+        margin-top: -7px;
+    }
+    .nav-menu {
+        &::after{
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .headerWithVid.sticky {
+        z-index: 99999;
+    }
+    .headerWithVid  .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: #1c1f2a;
+        width: 100%;
+        height: calc(100% - 50px);
+        border-radius: 0;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .headerWithVid  .nav-menu.active {
+        left: 0;
+        padding-top:20px
+    }
+
+    .headerWithVid .nav-item {
+        margin: 10px 0;
+    }
+
+    .headerWithVid .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .headerWithVid .nav-menu {
+        justify-content: end;
+    }
+    .headerWithVid .nav-logo img {
+        height: 60px;
+    }
+    .headerWithVid .fastLink a {
+        padding-bottom: 0;
+        
+    }
+    .stickyScroll .fastLink {
+        margin-top: 0;
+    }
+     .stickyScroll .nav-link {
+        padding-bottom: 25px;
+    }
+
+}

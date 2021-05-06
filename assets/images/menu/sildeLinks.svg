@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="17" viewBox="0 0 71 17">
+  <g id="sildeLinks" transform="translate(-42 -298)">
+    <g id="Component_21_8" data-name="Component 21 – 8" transform="translate(42 299)">
+      <text id="Section_Title" data-name="Section Title" transform="translate(71 12)" fill="#848484" font-size="12" font-family="SegoeUI, Segoe UI" opacity="0"><tspan x="-64.717" y="0">Section Title</tspan></text>
+      <g id="Ellipse_165" data-name="Ellipse 165" transform="translate(15)" fill="none" stroke="#bd9a5f" stroke-width="1.5">
+        <circle cx="8" cy="8" r="8" stroke="none"/>
+        <circle cx="8" cy="8" r="7.25" fill="none"/>
+      </g>
+      <circle id="Ellipse_166" data-name="Ellipse 166" cx="4" cy="4" r="4" transform="translate(19 4)" fill="#bd9a5f"/>
+    </g>
+  </g>
+</svg>
