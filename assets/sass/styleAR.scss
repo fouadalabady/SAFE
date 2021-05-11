@@ -375,6 +375,7 @@
         }
       }
     }
+    
     .swiper-solutionsCutom  {
         // width: calc(100% - 0px);
         // padding: 0 40px;
@@ -595,11 +596,11 @@
                 overflow: hidden;
                 img {
                     opacity: 1;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                border-radius: 0%;
-                animation: selector .75s alternate backwards;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 0%;
+                    animation: selector .75s alternate backwards;
                 }
               }
               .prag {
@@ -1267,7 +1268,13 @@
         transition: animation 3s;
         animation: myshipMob 1s alternate forwards;
     }
+    .SolutionsSec .swiper-slide .boxHover.s .TextHover {
+      margin-top: 0;
+    }
   
+    .SolutionsSec .swiper-solutions .swiper-wrapper > .swiper-slide-active .boxHover.s .TextHover h2 {
+      animation: unset !important;
+    }
     footer {
       text-align: center;
       .logoFoter0 {

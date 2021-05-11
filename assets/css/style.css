@@ -122,6 +122,22 @@ html {
   padding-left: 15px;
 }
 
+.closeBtnMin {
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #1c1f2a;
+  border-radius: 50%;
+}
+
 @-webkit-keyframes scrollDown {
   0% {
     opacity: 0;
@@ -320,59 +336,173 @@ html {
 
 @-webkit-keyframes selector {
   0% {
-    height: 10%;
-    width: 14%;
+    height: 50px;
+    width: 50px;
     margin: 0 auto;
-    border-radius: 70%;
+    border-radius: 50%;
     overflow: hidden;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    -webkit-perspective: 100px;
+            perspective: 100px;
   }
   50% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    -webkit-perspective: 100px;
+            perspective: 100px;
   }
   100% {
-    width: 100%;
-    height: 100%;
-    margin: unset;
+    margin: 0 auto;
     border-radius: unset;
     overflow: unset;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
     -webkit-transform: unset;
             transform: unset;
+    width: 100%;
+    -webkit-perspective: 100px;
+            perspective: 100px;
+    height: 100%;
   }
 }
 
 @keyframes selector {
   0% {
-    height: 10%;
-    width: 14%;
+    height: 50px;
+    width: 50px;
     margin: 0 auto;
-    border-radius: 70%;
+    border-radius: 50%;
     overflow: hidden;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    -webkit-perspective: 100px;
+            perspective: 100px;
   }
   50% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    -webkit-perspective: 100px;
+            perspective: 100px;
   }
   100% {
-    width: 100%;
-    height: 100%;
-    margin: unset;
+    margin: 0 auto;
     border-radius: unset;
     overflow: unset;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
     -webkit-transform: unset;
             transform: unset;
+    width: 100%;
+    -webkit-perspective: 100px;
+            perspective: 100px;
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes sliderMove1 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 0%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 49%;
+  }
+}
+
+@keyframes sliderMove1 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 0%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 49%;
+  }
+}
+
+@-webkit-keyframes sliderMove2 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 24%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 49%;
+  }
+}
+
+@keyframes sliderMove2 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 24%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 49%;
+  }
+}
+
+@-webkit-keyframes sliderMove3 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 50%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 49%;
+  }
+}
+
+@keyframes sliderMove3 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 50%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 49%;
+  }
+}
+
+@-webkit-keyframes sliderMove4 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 77%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 49%;
+  }
+}
+
+@keyframes sliderMove4 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 77%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 49%;
   }
 }
 
@@ -827,6 +957,10 @@ html {
   background: #fff;
 }
 
+.SolutionsSec .swiper-slide .boxHover .TextHover .closeBtnMin {
+  display: none;
+}
+
 .SolutionsSec .swiper-slide .boxHover .TextHover h2 {
   font-size: 30px;
   color: #1C1F2A;
@@ -845,6 +979,18 @@ html {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+}
+
+.SolutionsSec .swiper-slide .boxHover.s .TextHover .closeBtnMin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
 
 .SolutionsSec .swiper-slide .boxHover.s .TextHover {
@@ -858,6 +1004,7 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 80px;
 }
 
 .SolutionsSec .swiper-slide .boxHover.s .ImgHover img {
@@ -865,7 +1012,7 @@ html {
 }
 
 .SolutionsSec .swiper-slide .boxHover.s .TextHover h2 {
-  width: 264px;
+  width: 264px !important;
   padding-bottom: 20px !important;
   min-height: unset;
 }
@@ -908,6 +1055,26 @@ html {
 .SolutionsSec .swiper-slide .boxHover.s .hideBox {
   visibility: visible;
   height: auto;
+}
+
+.SolutionsSec .swiper-solutions .swiper-wrapper > .swiper-slide-active .boxHover.s .TextHover h2 {
+  -webkit-animation: sliderMove1 1.5s alternate  forwards;
+          animation: sliderMove1 1.5s alternate  forwards;
+}
+
+.SolutionsSec .swiper-solutions .swiper-wrapper > .swiper-slide-active + div .boxHover.s .TextHover h2 {
+  -webkit-animation: sliderMove2 1.5s alternate  forwards;
+          animation: sliderMove2 1.5s alternate  forwards;
+}
+
+.SolutionsSec .swiper-solutions .swiper-wrapper > .swiper-slide-active + div + div .boxHover.s .TextHover h2 {
+  -webkit-animation: sliderMove3 1.5s alternate  forwards;
+          animation: sliderMove3 1.5s alternate  forwards;
+}
+
+.SolutionsSec .swiper-solutions .swiper-wrapper > .swiper-slide-active + div + div + div .boxHover.s .TextHover h2 {
+  -webkit-animation: sliderMove4 1.5s alternate  forwards;
+          animation: sliderMove4 1.5s alternate  forwards;
 }
 
 .SolutionsSec .swiper-solutionsCutom .swiper-button-prev-unique,
@@ -1225,8 +1392,8 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0%;
-  -webkit-animation: selector .75s alternate backwards;
-          animation: selector .75s alternate backwards;
+  -webkit-animation: selector .75s alternate backwards ease-in;
+          animation: selector .75s alternate backwards ease-in;
 }
 
 .selectorSec .mainBox .boxRow4 .showBx.modelCum .hideBX .prag {
@@ -1966,6 +2133,13 @@ footer .copyRight a:hover i {
     transition: animation 3s, -webkit-animation 3s;
     -webkit-animation: myshipMob 1s alternate forwards;
             animation: myshipMob 1s alternate forwards;
+  }
+  .SolutionsSec .swiper-slide .boxHover.s .TextHover {
+    margin-top: 0;
+  }
+  .SolutionsSec .swiper-solutions .swiper-wrapper > .swiper-slide-active .boxHover.s .TextHover h2 {
+    -webkit-animation: unset !important;
+            animation: unset !important;
   }
   footer {
     text-align: center;

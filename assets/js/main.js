@@ -146,8 +146,11 @@ $(".boxHover").hover(function () {
   .toggleClass("s")
   .parents(".swiper-wrapper")
   .toggleClass("forTranslate");
+  // return false
 });
-
+// $(".closeBtnMin").click(function(){
+//   $(this).parents('.s').removeClass('s')
+// })
 
 /*
 ================================== End ================================= 
