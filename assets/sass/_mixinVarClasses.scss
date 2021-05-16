@@ -202,29 +202,7 @@ $mainBColor2lighter: #1c1f2a;
     height: 100%;
   }
 }
-// @keyframes selector {
-//   0% {
-//     height: 10%;
-//     width: 14%;
-//     margin: 0 auto;
-//     border-radius: 70%;
-//     overflow: hidden;
-//     transform-style: preserve-3d;
-//   }
-//   50% {
-//     transform: scale(1.2);
-//     transform-style: preserve-3d;
-//   }
-//   100% {
-//     width: 100%;
-//     height: 100%;
-//     margin: unset;
-//     border-radius: unset;
-//     overflow: unset;
-//     transform-style: preserve-3d;
-//     transform: unset;
-//   }
-// }
+// This for En page
 @keyframes sliderMove1 {
   from {
     position: absolute;
@@ -279,5 +257,62 @@ $mainBColor2lighter: #1c1f2a;
     position: absolute;
     bottom: 60%;
     left: 49%;
+  }
+}
+// This for ar page
+@keyframes sliderMove11 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 0%;
+ 
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 34%;
+ 
+  }
+}
+
+@keyframes sliderMove22 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 24%;
+ 
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 32.5%;
+ 
+  }
+}
+@keyframes sliderMove33 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 50%;
+ 
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 32.5%;
+ 
+  }
+}
+@keyframes sliderMove44 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 77%;
+
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 32%;
   }
 }

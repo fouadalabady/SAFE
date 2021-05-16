@@ -506,6 +506,110 @@ html {
   }
 }
 
+@-webkit-keyframes sliderMove11 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 0%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 34%;
+  }
+}
+
+@keyframes sliderMove11 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 0%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 34%;
+  }
+}
+
+@-webkit-keyframes sliderMove22 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 24%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 32.5%;
+  }
+}
+
+@keyframes sliderMove22 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 24%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 32.5%;
+  }
+}
+
+@-webkit-keyframes sliderMove33 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 50%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 32.5%;
+  }
+}
+
+@keyframes sliderMove33 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 50%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 32.5%;
+  }
+}
+
+@-webkit-keyframes sliderMove44 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 77%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 32%;
+  }
+}
+
+@keyframes sliderMove44 {
+  from {
+    position: absolute;
+    bottom: 14%;
+    left: 77%;
+  }
+  to {
+    position: absolute;
+    bottom: 60%;
+    left: 32%;
+  }
+}
+
 .headerWithVid .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1030,6 +1134,10 @@ header {
   background: #fff;
 }
 
+.SolutionsSec .swiper-slide .boxHover .TextHover .closeBtnMin {
+  display: none;
+}
+
 .SolutionsSec .swiper-slide .boxHover .TextHover h2 {
   font-size: 30px;
   color: #1C1F2A;
@@ -1048,10 +1156,39 @@ header {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+}
+
+.SolutionsSec .swiper-slide .boxHover.s .ImgHover {
+  height: 333px;
 }
 
 .SolutionsSec .swiper-slide .boxHover.s .ImgHover img {
   width: 100%;
+}
+
+.SolutionsSec .swiper-slide .boxHover.s .TextHover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 80px;
+}
+
+.SolutionsSec .swiper-slide .boxHover.s .TextHover .closeBtnMin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
 
 .SolutionsSec .swiper-slide .boxHover.s .TextHover h2 {
@@ -1099,6 +1236,26 @@ header {
 .SolutionsSec .swiper-slide .boxHover.s .hideBox {
   visibility: visible;
   height: auto;
+}
+
+.SolutionsSec .swiper-solutions .swiper-wrapper > .swiper-slide-active .boxHover.s .TextHover h2 {
+  -webkit-animation: sliderMove11 1.5s alternate  forwards;
+          animation: sliderMove11 1.5s alternate  forwards;
+}
+
+.SolutionsSec .swiper-solutions .swiper-wrapper > .swiper-slide-active + div .boxHover.s .TextHover h2 {
+  -webkit-animation: sliderMove22 1.5s alternate  forwards;
+          animation: sliderMove22 1.5s alternate  forwards;
+}
+
+.SolutionsSec .swiper-solutions .swiper-wrapper > .swiper-slide-active + div + div .boxHover.s .TextHover h2 {
+  -webkit-animation: sliderMove33 1.5s alternate  forwards;
+          animation: sliderMove33 1.5s alternate  forwards;
+}
+
+.SolutionsSec .swiper-solutions .swiper-wrapper > .swiper-slide-active + div + div + div .boxHover.s .TextHover h2 {
+  -webkit-animation: sliderMove44 1.5s alternate  forwards;
+          animation: sliderMove44 1.5s alternate  forwards;
 }
 
 .SolutionsSec .swiper-solutionsCutom .swiper-button-prev-unique,
@@ -1768,6 +1925,12 @@ footer .linksFooter li a:hover {
   -webkit-transition: 0.75s;
   transition: 0.75s;
   color: #bd9a5f;
+  padding-right: 5px;
+}
+
+footer .linksFooter li a:hover img {
+  -webkit-filter: invert(72%) sepia(61%) saturate(304%) hue-rotate(357deg) brightness(165%) contrast(87%);
+          filter: invert(72%) sepia(61%) saturate(304%) hue-rotate(357deg) brightness(165%) contrast(87%);
 }
 
 footer .copyRight {
@@ -2032,6 +2195,10 @@ footer .copyRight a:hover i {
     padding: 10px 20px;
     margin-top: 20px;
   }
+  .SolutionsSec .swiper-solutionsCutom .swiper-button-prev-unique,
+  .SolutionsSec .swiper-solutionsCutom .swiper-button-next-unique {
+    top: 20%;
+  }
   .SolutionsSec .swiper-solutionsCutom .swiper-button-prev-unique {
     left: 0;
   }
@@ -2047,6 +2214,9 @@ footer .copyRight a:hover i {
   .SolutionsSec .swiper-slide .boxHover.s {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .SolutionsSec .swiper-slide .boxHover.s .ImgHover {
+    height: unset;
   }
   .SolutionsSec .swiper-slide .boxHover.s .TextHover .hideBox a {
     margin-bottom: 20px;

@@ -282,11 +282,12 @@ html {
       display: grid;
       grid-template-columns: 1fr 1fr;
       box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.5);
-      -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.5);
-      -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.5);
-        
-      //   display: flex;
+
       .TextHover {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 80px;
         .closeBtnMin {
           display: flex;
           position: absolute;
@@ -295,12 +296,7 @@ html {
         }
     
         }
-      .TextHover {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 80px;
-      }
+ 
       .ImgHover {
           img {
             width: 100%;
@@ -903,6 +899,10 @@ footer {
           // text-decoration: none;
           transition: 0.75s;
           color: $mainColor;
+          padding-right: 5px;
+          img {
+            filter: invert(72%) sepia(61%) saturate(304%) hue-rotate(357deg) brightness(165%) contrast(87%);
+          }
         }
       }
     }
@@ -1128,6 +1128,10 @@ footer {
     padding: 10px 20px;
     margin-top: 20px;
   }
+  .SolutionsSec .swiper-solutionsCutom .swiper-button-prev-unique,
+  .SolutionsSec .swiper-solutionsCutom .swiper-button-next-unique {
+   top: 20%;
+ }
   .SolutionsSec .swiper-solutionsCutom .swiper-button-prev-unique {
     left: 0;
   }
