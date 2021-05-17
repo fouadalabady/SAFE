@@ -58,10 +58,71 @@ html {
   font-display: swap;
 }
 
+label {
+  font-size: 16px;
+  color: #1C1F2A;
+  font-family: "Medium";
+  display: block;
+  margin-bottom: 10px;
+}
+
+label span {
+  color: red;
+}
+
+textarea,
+input {
+  background-color: #F5F5F5;
+  border: unset;
+  color: #1C1F2A;
+  width: 100%;
+  padding: 12px;
+}
+
+textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #5e5e5947;
+  font-family: "Regular";
+  font-size: 16px;
+}
+
+:-ms-input-placeholder {
+  color: #5e5e5947;
+  font-family: "Regular";
+  font-size: 16px;
+}
+
+::-ms-input-placeholder {
+  color: #5e5e5947;
+  font-family: "Regular";
+  font-size: 16px;
+}
+
+::placeholder {
+  color: #5e5e5947;
+  font-family: "Regular";
+  font-size: 16px;
+}
+
 .headingTitle, .aboutUs .aboutTextBox .boxInner h2, .SolutionsSec .headerSlu h2, .joinSafe .boxText h3, .selectorSec .mainBox h2, .mapSection h2 {
   font-size: 40px;
   color: #fff;
-  font-family: "Medium";
+  font-family: "Bold";
+  margin: 0;
+}
+
+.headingTitlePX45 {
+  font-size: 45px;
+  color: #bd9a5f;
+  font-family: "Bold";
   margin: 0;
 }
 

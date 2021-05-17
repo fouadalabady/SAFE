@@ -58,10 +58,71 @@ html {
   font-display: swap;
 }
 
+label {
+  font-size: 16px;
+  color: #1C1F2A;
+  font-family: "Medium";
+  display: block;
+  margin-bottom: 10px;
+}
+
+label span {
+  color: red;
+}
+
+textarea,
+input {
+  background-color: #F5F5F5;
+  border: unset;
+  color: #1C1F2A;
+  width: 100%;
+  padding: 12px;
+}
+
+textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #5e5e5947;
+  font-family: "Regular";
+  font-size: 16px;
+}
+
+:-ms-input-placeholder {
+  color: #5e5e5947;
+  font-family: "Regular";
+  font-size: 16px;
+}
+
+::-ms-input-placeholder {
+  color: #5e5e5947;
+  font-family: "Regular";
+  font-size: 16px;
+}
+
+::placeholder {
+  color: #5e5e5947;
+  font-family: "Regular";
+  font-size: 16px;
+}
+
 .headingTitle, .aboutUs .aboutTextBox .boxInner h2, .SolutionsSec .headerSlu h2, .joinSafe .boxText h3, .selectorSec .mainBox h2, .mapSection h2 {
   font-size: 40px;
   color: #fff;
-  font-family: "Medium";
+  font-family: "Bold";
+  margin: 0;
+}
+
+.headingTitlePX45, .scrollMap .contactDiv .linksFooter li:first-of-type, .contactMap .container .row > .boxForm h2 {
+  font-size: 45px;
+  color: #bd9a5f;
+  font-family: "Bold";
   margin: 0;
 }
 
@@ -72,7 +133,7 @@ html {
   margin: 0;
 }
 
-.textPra, .aboutUs .aboutTextBox .boxInner p, .SolutionsSec .headerSlu p, .joinSafe .boxText p, .selectorSec .mainBox .boxRow4 .showBx p, .selectorSec .mainBox .boxRow4 .showBx.modelCum .hideBX .prag p {
+.textPra, .aboutUs .aboutTextBox .boxInner p, .SolutionsSec .headerSlu p, .joinSafe .boxText p, .selectorSec .mainBox .boxRow4 .showBx p, .selectorSec .mainBox .boxRow4 .showBx.modelCum .hideBX .prag p, .contactMap .container .row > .boxForm button {
   font-size: 18px;
   line-height: 1.5;
   color: #fff;
@@ -1773,6 +1834,131 @@ html {
 
 /* **********************************************************************  END */
 /*
+******** contact us page
+***************************
+*/
+.innerPages:not(.stickyScroll) {
+  background: #1C1F2A;
+  position: relative;
+}
+
+.scrollMap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 5fr;
+      grid-template-columns: 4fr 5fr;
+  border: 1px solid #707070;
+  border-right: unset;
+  border-left: unset;
+}
+
+.scrollMap .mapScroll {
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+  height: 720px;
+  overflow-x: auto;
+}
+
+.scrollMap .mapScroll::-webkit-scrollbar {
+  width: 3px;
+}
+
+.scrollMap .mapScroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollMap .mapScroll::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.scrollMap .mapScroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.scrollMap .mapScroll img {
+  height: 120%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.scrollMap .contactDiv {
+  background: #252938;
+  background-image: url(../images/aboutUs/AW.png);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-right: 100px;
+  margin-bottom: 0;
+}
+
+.scrollMap .contactDiv .linksFooter {
+  margin: 0;
+}
+
+.scrollMap .contactDiv .linksFooter li:first-of-type {
+  margin-bottom: 44px;
+}
+
+.scrollMap .contactDiv .linksFooter li a {
+  font-size: 20px;
+  margin-bottom: 3px;
+  display: block;
+  font-family: "Medium";
+  color: #fff;
+}
+
+.scrollMap .contactDiv .linksFooter li a img {
+  margin-right: 5px;
+}
+
+.contactMap {
+  margin-bottom: 100px;
+  margin-top: -20px;
+}
+
+.contactMap .container .row > .boxForm {
+  padding: 0 40px 78px 40px;
+  background: #fff;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 85%;
+          flex: 0 0 85%;
+  max-width: 85%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 12px 0px #c8c4c4;
+          box-shadow: 0px 0px 12px 0px #c8c4c4;
+}
+
+.contactMap .container .row > .boxForm h2 {
+  margin: 50px 0 42px;
+}
+
+.contactMap .container .row > .boxForm .formGroup {
+  margin-bottom: 30px;
+}
+
+.contactMap .container .row > .boxForm button {
+  border: 2px solid #fff;
+  height: 55px;
+  width: 250px;
+  background-color: #bd9a5f;
+}
+
+/* **********************************************************************  END */
+/*
 ******** start footer
 ***************************
 */
@@ -2253,6 +2439,33 @@ footer .copyRight a:hover i {
   .SolutionsSec .swiper-solutions .swiper-wrapper > .swiper-slide-active .boxHover.s .TextHover h2 {
     -webkit-animation: unset !important;
             animation: unset !important;
+  }
+  .scrollMap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .scrollMap .contactDiv {
+    padding: 30px 15px 40px 15px;
+  }
+  .scrollMap .contactDiv .linksFooter li:first-of-type {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .contactMap .container .row > .boxForm {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 95%;
+            flex: 0 0 95%;
+    max-width: 95%;
+    padding: 0 20px 50px 20px;
+  }
+  .contactMap .container .row > .boxForm h2 {
+    font-size: 40px;
+    margin-left: -20px;
   }
   footer {
     text-align: center;

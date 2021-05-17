@@ -94,12 +94,15 @@ $(document).on("click", 'a[href^="#"]', function (event) {
 });
 $(document).scroll(function () {
   var y = $(this).scrollTop();
-  var showFromHere = $(".aboutUs").offset().top - 300;
+  if( $('.aboutUs').length ) {
+     var showFromHere = $(".aboutUs").offset().top - 300;
   if (y > showFromHere) {
     $(".linsSide").fadeIn();
   } else {
     $(".linsSide").fadeOut();
   }
+  }
+
 });
 /*
 ================================== End ================================= 
