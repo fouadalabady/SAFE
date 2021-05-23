@@ -908,6 +908,119 @@
   
   /* **********************************************************************  END */
   
+/*
+******** contact us page
+***************************
+*/
+.innerPages:not(.stickyScroll) {
+  background: #1C1F2A;
+  position: relative;
+}
+.scrollMap {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  border: 1px solid #707070;
+    border-right: unset;
+    border-left: unset;
+  .mapScroll {
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+     
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888; 
+    }
+    
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
+    height: 720px;
+    overflow-x: auto;
+    img {
+      height: 120%;
+      object-fit: cover;
+    }
+  }
+  .contactDiv {
+
+    .linksFooter {
+      margin: 0;
+      li {
+        &:first-of-type {
+          @extend .headingTitlePX45;
+          margin-bottom: 44px;
+        }
+  
+        a {
+          font-size: 20px;
+          margin-bottom: 3px;
+          display: block;
+          font-family: "Medium";
+          color: #fff;
+          img {
+            margin-right: 5px;
+          }
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    background: #252938;
+    background-image: url(../images/aboutUs/AW.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 100px;
+    margin-bottom: 0;
+  }
+}
+.contactMap {
+  margin-bottom: 100px;
+  margin-top: -20px;
+  .container {
+    .row {
+      & > .boxForm {
+        padding: 0 40px 78px 40px;
+        
+        background: #fff;
+        flex: 0 0 85%;
+        max-width: 85%;
+        margin: 0 auto;
+        box-shadow: 0px 0px 12px 0px #c8c4c4;
+        h2 {
+          @extend .headingTitlePX45;
+          margin: 50px 0 42px;
+        }
+        .formGroup {
+          margin-bottom: 30px;
+        }
+        button {
+          @extend .textPra;
+          border: 2px solid #fff;
+          height: 55px;
+          width: 250px;
+          background-color: $mainColor;
+        }
+   
+      }
+    }
+  }
+}
+
+/* **********************************************************************  END */
+
   /*
   ******** start footer
   ***************************
@@ -1340,6 +1453,33 @@
     .SolutionsSec .swiper-solutions .swiper-wrapper > .swiper-slide-active .boxHover.s .TextHover h2 {
       animation: unset !important;
     }
+    // contact us 
+  .scrollMap {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .scrollMap .contactDiv {
+    padding: 30px 15px 40px 15px; 
+  }
+  
+  .scrollMap .contactDiv .linksFooter li:first-of-type {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .contactMap .container .row > .boxForm {
+    flex: 0 0 95%;
+    max-width: 95%;
+    padding: 0 20px 50px 20px;
+  }
+  .contactMap .container .row > .boxForm h2 {
+    font-size: 40px;
+    margin-left: -20px;
+  }
+  .contactMap .container .row > .boxForm button {
+    margin-top: 30px;
+    width: 100%;
+  }
     footer {
       text-align: center;
       .logoFoter0 {

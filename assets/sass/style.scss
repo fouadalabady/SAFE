@@ -912,6 +912,9 @@ html {
           img {
             margin-right: 5px;
           }
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
     }
@@ -1409,6 +1412,10 @@ footer {
   .contactMap .container .row > .boxForm h2 {
     font-size: 40px;
     margin-left: -20px;
+  }
+  .contactMap .container .row > .boxForm button {
+    margin-top: 30px;
+    width: 100%;
   }
   footer {
     text-align: center;

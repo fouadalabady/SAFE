@@ -1925,6 +1925,10 @@ input:focus, select:focus, textarea:focus {
   margin-right: 5px;
 }
 
+.scrollMap .contactDiv .linksFooter li a:hover {
+  text-decoration: none;
+}
+
 .contactMap {
   margin-bottom: 100px;
   margin-top: -20px;
@@ -2466,6 +2470,10 @@ footer .copyRight a:hover i {
   .contactMap .container .row > .boxForm h2 {
     font-size: 40px;
     margin-left: -20px;
+  }
+  .contactMap .container .row > .boxForm button {
+    margin-top: 30px;
+    width: 100%;
   }
   footer {
     text-align: center;
