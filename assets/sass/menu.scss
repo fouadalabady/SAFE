@@ -28,22 +28,35 @@
     margin: 0;
     
 }
+.headerWithVid:not(.stickyScroll,.innerPages) .fastLink,
+.headerWithVid:not(.stickyScroll,.innerPages) .nav-menu {
+    margin-top: -15px;
+}
+
 .stickyScroll{
     box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.5);
 }
 .headerWithVid .nav-item {
-     margin-left: 41px;
+    //  margin-left: 10px;
 }
 .headerWithVid .fastLink a,
 .headerWithVid .nav-link{
     font-size: 14px;
     font-family: 'Medium';
     color: #fff;
-    padding: 0;
     border-bottom: 1px solid #ffffff00;
     padding-bottom: 25px;
     text-decoration: none;
     transition: .75s;
+    padding: 25px 20px;
+   
+}
+.headerWithVid .fastLink a,
+ .headerWithVid .nav-link {
+    padding: 34px 20px;
+}
+.headerWithVid .nav-menu .nav-item:first-of-type .nav-link {
+    padding-left: 0;
 }
 .headerWithVid .fastLink a:hover,
 .headerWithVid .nav-link:hover{
@@ -51,9 +64,19 @@
     border-bottom: 1px solid #bd9a5f;
     text-decoration: none;
 }
-
+.headerWithVid .nav-item.subMenu .nav-link:hover {
+    background: #ffffff0a;
+}
+.headerWithVid .activeMenu {
+    
+    background: #ffffff0a;
+}
+.headerWithVid .activeMenu > a{
+    border-bottom: 1px solid #bd9a5f;
+}
 .headerWithVid .nav-logo img{
     height: 89px;
+    padding: 15px 0px 10px 0px;
 }
 .headerWithVid .fastLink {
     display: flex;
@@ -63,6 +86,46 @@
 .headerWithVid .nav-item:first-of-type{
     margin-left: 0;
 }
+.headerWithVid .subMenu {
+    position: relative;
+}
+
+.headerWithVid .subMenu .subLinks{
+    position: absolute;
+    background: $mainBColor2lighter;
+    min-width: 280px;
+    left: 0;
+    padding: 14px;
+    display: none;
+    
+}
+.stickyScroll.headerWithVid .subMenu .subLinks {
+    top: 60px;
+}
+.headerWithVid .subMenu:hover .subLinks {
+    display: block;
+}
+.headerWithVid .subMenu .subLinks li {
+    border-bottom: 1px solid #707070;
+}
+.headerWithVid .subMenu .subLinks li:last-of-type {
+    border-bottom: 0px solid #707070;
+}
+.headerWithVid .subMenu .subLinks li:hover {
+    background-color: #232631;
+    border-radius: 5px 5px 0 0;
+}
+.headerWithVid .subMenu .subLinks li a{
+    font-size: 14px;
+    font-family: 'Medium';
+    color: #fff;
+    text-decoration: none;
+    padding-left: 5px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    
+}
 .nav-menu {
     position: relative;
 }
@@ -71,14 +134,19 @@
     position: absolute;
     content: "";
     height: 1px;
-    background: #0000001c;
-    width: 164%;
+    background: #ffffff26;
+    width: 237%;
     bottom: 0px;
     left: 0;
+}
+.innerPages .nav-menu::after {
+    display: none;
 }
 .headerWithVid .fastLink > li:first-of-type {
     margin-right: 33px;
 }
+
+
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
     position: fixed;
@@ -100,6 +168,10 @@
     .nav-link {
         padding-bottom: 0;
         transition: unset;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 25px 20px;
     }
     .fastLink {
         margin-top: -7px;
@@ -146,11 +218,15 @@
         justify-content: end;
     }
     .headerWithVid .nav-logo img {
-        height: 60px;
+        height: 50px;
     }
     .headerWithVid .fastLink a {
-        padding-bottom: 0;
+        padding-bottom: 25px;
         
+    }
+    .headerWithVid .nav-item.subMenu .nav-link:hover {
+        display: flex;
+        justify-content: center;
     }
     .stickyScroll .fastLink {
         margin-top: 0;
@@ -158,5 +234,33 @@
      .stickyScroll .nav-link {
         padding-bottom: 25px;
     }
-
+    .headerWithVid .subMenu:hover .subLinks{
+        display: none;
+    }
+    .headerWithVid .nav-menu .nav-item:first-of-type .nav-link {
+        padding-left: 20px;
+    }
+    .headerWithVid .nav-item.subMenu > a::after {
+        content: "\f078";
+         font-family: FontAwesome;
+        color: $mainColor;
+        padding-left: 10px;
+         margin-right: -15px;
+    }
+    .headerWithVid .subMenu:hover .subLinks.showSubMen,
+    .headerWithVid .subMenu:hover .subLinks {
+          position: unset;
+          background: #232631;
+        border-radius: 5px;
+        
+    }
+    .headerWithVid .subMenu:hover .subLinks.showSubMen {
+        display: block !important;
+    }
+    .headerWithVid .subMenu .subLinks li a {
+        justify-content: center;
+    }
+    .headerWithVid:not(.stickyScroll) .fastLink, .headerWithVid:not(.stickyScroll) .nav-menu {
+        margin-top: 0;
+    }
 }

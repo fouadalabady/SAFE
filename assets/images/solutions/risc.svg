@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48.078" height="48" viewBox="0 0 48.078 48">
+  <g id="risc" transform="translate(0 -0.389)">
+    <g id="Group_24165" data-name="Group 24165" transform="translate(0 0.389)">
+      <g id="Group_24164" data-name="Group 24164" transform="translate(0 0)">
+        <path id="Path_51206" data-name="Path 51206" d="M47.9,45.9,25.576,1.262a1.789,1.789,0,0,0-3.074,0L.182,45.9a1.717,1.717,0,0,0,1.537,2.485H46.361A1.717,1.717,0,0,0,47.9,45.9Zm-43.4-.95L24.04,5.869,43.583,44.955Z" transform="translate(0 -0.389)" fill="#bd9a5f"/>
+      </g>
+    </g>
+    <g id="Group_24167" data-name="Group 24167" transform="translate(22.323 17.483)">
+      <g id="Group_24166" data-name="Group 24166">
+        <path id="Path_51207" data-name="Path 51207" d="M223.6,170.3a1.717,1.717,0,0,0-1.717,1.717v12.019a1.717,1.717,0,0,0,3.434,0V172.014A1.717,1.717,0,0,0,223.6,170.3Z" transform="translate(-221.878 -170.297)" fill="#bd9a5f"/>
+      </g>
+    </g>
+    <g id="Group_24169" data-name="Group 24169" transform="translate(22.323 36.37)">
+      <g id="Group_24168" data-name="Group 24168">
+        <path id="Path_51208" data-name="Path 51208" d="M223.6,358.031a1.717,1.717,0,0,0-1.717,1.717v1.717a1.717,1.717,0,0,0,3.434,0v-1.717A1.717,1.717,0,0,0,223.6,358.031Z" transform="translate(-221.878 -358.031)" fill="#bd9a5f"/>
+      </g>
+    </g>
+  </g>
+</svg>

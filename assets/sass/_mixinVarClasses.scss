@@ -1,356 +1,463 @@
-
 // var
 $colorwhite: #fff;
 $mainColor: #bd9a5f;
 $minBgColor: #262a3a;
 $mainBColor2lighter: #1c1f2a;
 // global style input
+// var
+$sections-bg:#252938;
+$p-dark:#696A6E;
+$p-color:#666666;
 label {
-  font-size: 16px;
-  color: #1C1F2A;
-  font-family: "Medium";
-  display: block;
-  margin-bottom: 10px;
-  span {
-    color: red;
-  }
+    font-size: 16px;
+    color: #1C1F2A;
+    font-family: "Medium";
+    display: block;
+    margin-bottom: 10px;
+    span {
+        color: red;
+    }
 }
+select,
 textarea,
 input {
-  background-color: #F5F5F5;
-  border: unset;
-  color: #1C1F2A;
-  width: 100%;
-  padding: 12px;
+    background-color: #f5f5f5;
+    border: unset;
+    color: #1c1f2a;
+    width: 100%;
+    padding: 12px;
 }
 textarea {
-  min-height: 150px;
-  resize: none;
+    min-height: 150px;
+    resize: none;
 }
-input:focus, select:focus, textarea:focus {
-  outline: none;
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
 }
 ::placeholder {
-  color: #5e5e5947;
-  font-family: "Regular";
-  font-size: 16px;
+    color: #5e5e5947;
+    font-family: "Regular";
+    font-size: 16px;
 }
-
+select {
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+    background-image: url(../images/careersAndFromInputs/arrowDon.svg);
+    background-repeat: no-repeat;
+    background-position: 97% 22px;
+}
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.customFileUpload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    border: unset;
+    color: #1c1f2a;
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+}
+.customRadio {
+    padding-top: 10px;
+    input[type="radio"] {
+        display: none;
+    }
+    label {
+        position: relative;
+        display: inline-block;
+        padding: 3px 3px 3px 25px;
+        cursor: pointer;
+        font-size: 14px;
+        &:not(:last-of-type) {
+            margin-right: 35px;
+        }
+    }
+    label::before,
+    label::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        border-radius: 100%;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+    label::before {
+        left: 0;
+        width: 18px;
+        height: 18px;
+        margin-top: -11px;
+        background: #fff;
+        border: 1px solid #707070;
+    }
+    label:hover::before {
+        background: #fff;
+    }
+    label::after {
+        opacity: 0;
+        left: 4px;
+        width: 10px;
+        height: 10px;
+        margin-top: -7px;
+        background: $mainColor;
+        -webkit-transform: scale(2);
+        transform: scale(2);
+    }
+    input[type="radio"]:checked + label {
+        color: $mainColor;
+    }
+    input[type="radio"]:checked + label::before {
+        background: #fff;
+        border: 1px solid $mainColor;
+    }
+    input[type="radio"]:checked + label::after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url(../images/careersAndFromInputs/calendar.svg);
+}
 @mixin BTNMain($minWidth, $letterSpace) {
-  &:hover {
-    background-color: $mainColor;
+    &:hover {
+        background-color: $mainColor;
+        color: $colorwhite;
+        transition: 0.75s;
+    }
+    font-size: 16px;
+    border: 1px solid #bd9a5f;
     color: $colorwhite;
-    transition: 0.75s;
-  }
-  font-size: 16px;
-  border: 1px solid #bd9a5f;
-  color: $colorwhite;
-  padding: 15px 35px;
-  font-family: "Regular";
-  display: inline-block;
-  text-decoration: none;
-  min-width: $minWidth;
-  letter-spacing: $letterSpace;
+    padding: 15px 35px;
+    font-family: "Regular";
+    display: inline-block;
+    text-decoration: none;
+    min-width: $minWidth;
+    letter-spacing: $letterSpace;
 }
 .headingTitle {
-  font-size: 40px;
-  color: $colorwhite;
- font-family: "Bold";
-  margin: 0;
+    font-size: 40px;
+    color: $colorwhite;
+    font-family: "Bold";
+    margin: 0;
 }
 .headingTitlePX45 {
-  font-size: 45px;
-  color: $mainColor;
-  font-family: "Bold";
-  margin: 0;
+    font-size: 45px;
+    color: $mainColor;
+    font-family: "Bold";
+    margin: 0;
+}
+.headingTitlePX35 {
+    font-size: 35px;
+    color: $mainBColor2lighter;
+    font-family: "Bold";
+    margin: 0;
+}
+/* fouad */
+.headingTitlePX30 {
+    font-size: 30px;
+    color: $mainBColor2lighter;
+    font-family: "Bold";
+    margin: 0;
+}
+.headingTitlePX25 {
+    font-size: 25px;
+    font-family: "Bold";
+    margin: 0;
 }
 .subTitle {
-  font-size: 23px;
-  color: $mainColor;
-  font-family: "light";
-  margin: 0;
+    font-size: 23px;
+    color: $mainColor;
+    font-family: "light";
+    margin: 0;
 }
 .textPra {
-  font-size: 18px;
-  line-height: 1.5;
-  color: $colorwhite;
-  font-family: "Regular";
-  margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $colorwhite;
+    font-family: "Regular";
+    margin: 0;
+}
+.textPra20px {
+    font-size: 20px;
+    line-height: 2;
+    color: $colorwhite;
+    font-family: "Regular";
+    margin: 0;
 }
 .readMoreBtn {
-  font-size: 16px;
-  font-family: "light";
-  color: $colorwhite;
-  margin: 0;
-  text-decoration: unset;
-  position: relative;
-  &::after {
-    position: absolute;
-    content: "";
-    width: 0px;
-    height: 1px;
-    background-color: $mainColor;
-    bottom: -1px;
-    left: 0;
-  }
-  &:hover {
-    color: $mainColor;
-    transition: 0.75s;
+    font-size: 16px;
+    font-family: "light";
+    color: $colorwhite;
+    margin: 0;
+    text-decoration: unset;
+    position: relative;
     &::after {
-      width: 100%;
-      transition: 0.75s;
+        position: absolute;
+        content: "";
+        width: 0px;
+        height: 1px;
+        background-color: $mainColor;
+        bottom: -1px;
+        left: 0;
+    }
+    &:hover {
+        color: $mainColor;
+        transition: 0.75s;
+        &::after {
+            width: 100%;
+            transition: 0.75s;
+        }
+        i {
+            padding-left: 20px;
+            transition: 0.75s;
+        }
     }
     i {
-      padding-left: 20px;
-      transition: 0.75s;
+        color: $mainColor;
+        padding-left: 15px;
     }
-  }
-  i {
-    color: $mainColor;
-    padding-left: 15px;
-  }
 }
 .closeBtnMin {
-  width: 60px;
+    width: 60px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #1c1f2a;
     border-radius: 50%;
-  img {
-    
-  }
+    img {}
 }
 @keyframes scrollDown {
-  0% {
-    opacity: 0;
-    transform: translate(0, -10px);
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    transform: translate(0, 2px);
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+        transform: translate(0, -10px);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 2px);
+        opacity: 0;
+    }
 }
-
 @keyframes circles {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  75% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1.4);
-  }
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    75% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1.4);
+    }
 }
-
-
 @keyframes myship {
-  from {
-    position: absolute;
-    top: 400px;
-    left: 461px;
-  }
-  to {
-    position: absolute;
-    top: 40px;
-    left: 84px;
-    background-color: transparent;
-  }
+    from {
+        position: absolute;
+        top: 400px;
+        left: 461px;
+    }
+    to {
+        position: absolute;
+        top: 40px;
+        left: 84px;
+        background-color: transparent;
+    }
 }
 @keyframes myship2 {
-  from {
-    position: absolute;
-    top: 400px;
-    left: 1225px;
-  }
-  to {
-    position: absolute;
-    top: 40px;
-    left: 84px;
-    background-color: transparent;
-  }
+    from {
+        position: absolute;
+        top: 400px;
+        left: 825px;
+    }
+    to {
+        position: absolute;
+        top: 40px;
+        left: 84px;
+        background-color: transparent;
+    }
+}
+@keyframes myship33 {
+    from {
+        position: absolute;
+        top: 400px;
+        left: 1225px;
+    }
+    to {
+        position: absolute;
+        top: 40px;
+        left: 84px;
+        background-color: transparent;
+    }
 }
 @keyframes myship3 {
-  from {
-    position: absolute;
-    top: 630px;
-    left: 600px;
-  }
-  to {
-    position: absolute;
-    top: 40px;
-    left: 84px;
-    background-color: transparent;
-  }
+    from {
+        position: absolute;
+        top: 630px;
+        left: 600px;
+    }
+    to {
+        position: absolute;
+        top: 40px;
+        left: 84px;
+        background-color: transparent;
+    }
 }
 @keyframes myshipMob {
-  from {
-    position: absolute;
-    top: 630px;
-    left: 0;
-  }
-  to {
-    position: absolute;
-    top: 40px;
-    left: 15px;
-    background-color: transparent;
-  }
+    from {
+        position: absolute;
+        top: 630px;
+        left: 0;
+    }
+    to {
+        position: absolute;
+        top: 40px;
+        left: 15px;
+        background-color: transparent;
+    }
 }
 @keyframes selector {
-  0% {
-    height: 50px;
-    width: 50px;
-    margin: 0 auto;
-    border-radius: 50%;
-    overflow: hidden;
-  
-    perspective: 100px;
-  }
-  50% {
-    height: 100px;
-    width: 100px;
-    margin: 0 auto;
-    border-radius: 50%;
-    overflow: hidden;
-    transform: scale(1.8);
-    perspective: 100px;
-  
-  }
-  100% {
-    margin: 0 auto;
-    border-radius: unset;
-    overflow: unset;
-    transform: unset;
-    width: 100%;
-    perspective: 100px;
-    height: 100%;
-  }
+    0% {
+        height: 50px;
+        width: 50px;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        perspective: 100px;
+    }
+    50% {
+        height: 100px;
+        width: 100px;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        transform: scale(1.8);
+        perspective: 100px;
+    }
+    100% {
+        margin: 0 auto;
+        border-radius: unset;
+        overflow: unset;
+        transform: unset;
+        width: 100%;
+        perspective: 100px;
+        height: 100%;
+    }
 }
 // This for En page
 @keyframes sliderMove1 {
-  from {
-    position: absolute;
-    bottom: 14%;
-    left: 0%;
- 
-  }
-  to {
-    position: absolute;
-    bottom: 60%;
-    left: 49%;
- 
-  }
+    from {
+        position: absolute;
+        bottom: 14%;
+        left: 0%;
+    }
+    to {
+        position: absolute;
+        bottom: 60%;
+        left: 49%;
+    }
 }
-
 @keyframes sliderMove2 {
-  from {
-    position: absolute;
-    bottom: 14%;
-    left: 24%;
- 
-  }
-  to {
-    position: absolute;
-    bottom: 60%;
-    left: 49%;
- 
-  }
+    from {
+        position: absolute;
+        bottom: 14%;
+        left: 24%;
+    }
+    to {
+        position: absolute;
+        bottom: 60%;
+        left: 49%;
+    }
 }
 @keyframes sliderMove3 {
-  from {
-    position: absolute;
-    bottom: 14%;
-    left: 50%;
- 
-  }
-  to {
-    position: absolute;
-    bottom: 60%;
-    left: 49%;
- 
-  }
+    from {
+        position: absolute;
+        bottom: 14%;
+        left: 50%;
+    }
+    to {
+        position: absolute;
+        bottom: 60%;
+        left: 49%;
+    }
 }
 @keyframes sliderMove4 {
-  from {
-    position: absolute;
-    bottom: 14%;
-    left: 77%;
-
-  }
-  to {
-    position: absolute;
-    bottom: 60%;
-    left: 49%;
-  }
+    from {
+        position: absolute;
+        bottom: 14%;
+        left: 77%;
+    }
+    to {
+        position: absolute;
+        bottom: 60%;
+        left: 49%;
+    }
 }
 // This for ar page
 @keyframes sliderMove11 {
-  from {
-    position: absolute;
-    bottom: 14%;
-    left: 0%;
- 
-  }
-  to {
-    position: absolute;
-    bottom: 60%;
-    left: 34%;
- 
-  }
+    from {
+        position: absolute;
+        bottom: 14%;
+        left: 0%;
+    }
+    to {
+        position: absolute;
+        bottom: 60%;
+        left: 34%;
+    }
 }
-
 @keyframes sliderMove22 {
-  from {
-    position: absolute;
-    bottom: 14%;
-    left: 24%;
- 
-  }
-  to {
-    position: absolute;
-    bottom: 60%;
-    left: 32.5%;
- 
-  }
+    from {
+        position: absolute;
+        bottom: 14%;
+        left: 24%;
+    }
+    to {
+        position: absolute;
+        bottom: 60%;
+        left: 32.5%;
+    }
 }
 @keyframes sliderMove33 {
-  from {
-    position: absolute;
-    bottom: 14%;
-    left: 50%;
- 
-  }
-  to {
-    position: absolute;
-    bottom: 60%;
-    left: 32.5%;
- 
-  }
+    from {
+        position: absolute;
+        bottom: 14%;
+        left: 50%;
+    }
+    to {
+        position: absolute;
+        bottom: 60%;
+        left: 32.5%;
+    }
 }
 @keyframes sliderMove44 {
-  from {
-    position: absolute;
-    bottom: 14%;
-    left: 77%;
-
-  }
-  to {
-    position: absolute;
-    bottom: 60%;
-    left: 32%;
-  }
+    from {
+        position: absolute;
+        bottom: 14%;
+        left: 77%;
+    }
+    to {
+        position: absolute;
+        bottom: 60%;
+        left: 32%;
+    }
 }

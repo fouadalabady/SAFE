@@ -35,6 +35,14 @@ function myFunction() {
     navbar.classList.remove("stickyScroll");
   }
 }
+$('.subMenu').click(function(){
+  
+  $(this).children('ul').toggleClass('showSubMen')
+})
+$('.subLinks').hover(function(){
+  $(this).parent().toggleClass('activeMenu');
+  
+})
 /*
 ================================== End ================================= 
 */
@@ -80,9 +88,9 @@ $(function () {
 ================================== End ================================= 
 */
 /*
-  side links navigator
+  side links navigator 
 */
-$(document).on("click", 'a[href^="#"]', function (event) {
+$(".navigatorLins").on("click", 'a[href^="#"]', function (event) {
   event.preventDefault();
 
   $("html, body").animate(
@@ -104,6 +112,9 @@ $(document).scroll(function () {
   }
 
 });
+
+
+
 /*
 ================================== End ================================= 
 */
@@ -233,6 +244,28 @@ $(".showBx").click(function () {
     return false;
   }, 10);
 });
+
+/*
+================================== End ================================= 
+*/
+
+/*
+ ** start upload file
+*/
+$('#file-upload').change(function() {
+  var i = $(this).prev('label').clone();
+  var file = $('#file-upload')[0].files[0].name;
+  $(this).prev('label').text(file);
+});
+/*
+================================== End ================================= 
+*/
+/*
+ ** start smart guard  
+ */
+$('.boxesText ').click(function(){
+  $(this).toggleClass('activeGuard')
+})
 
 /*
 ================================== End ================================= 

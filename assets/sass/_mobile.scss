@@ -1,0 +1,269 @@
+
+@media only screen and (max-width: 768px) {
+    .linsSide {
+      left: 10px;
+      top: calc(50% - (100px / 2));
+    }
+    .mediaLins {
+      margin-bottom: 25px;
+    }
+    .mediaLins li {
+      margin-bottom: 15px;
+    }
+    .imgSlider .testSlider .boxTest {
+      width: 82%;
+    }
+    .silderBanner .swiper-container {
+      height: 70vh;
+    }
+    .silderBanner .testSlider {
+      top: 30%;
+      left: 0;
+      width: 100%;
+      transform: unset;
+      padding-left: 20px;
+    }
+    .silderBanner .testSlider .boxBlay {
+      margin-left: 0;
+    }
+    .silderBanner .testSlider .boxTest h2 {
+      font-size: 25px;
+    }
+    .silderBanner .testSlider .boxTest p {
+      display: none;
+    }
+    .silderBanner .testSlider .boxTest a {
+      font-size: 14px;
+      padding: 10px 20px;
+      margin-top: 20px;
+    }
+    .SolutionsSec .swiper-solutionsCutom .swiper-button-prev-unique,
+    .SolutionsSec .swiper-solutionsCutom .swiper-button-next-unique {
+      top: 20%;
+    }
+    .SolutionsSec .swiper-solutionsCutom .swiper-button-prev-unique {
+      left: 0;
+    }
+    .SolutionsSec .swiper-solutionsCutom .swiper-button-next-unique {
+      right: 0;
+    }
+    .SolutionsSec {
+      padding: 48px 0 0;
+    }
+    .swiper-solutions {
+      height: 100vh;
+    }
+    .SolutionsSec .swiper-slide .boxHover.s {
+      grid-template-columns: 1fr;
+    }
+    .SolutionsSec .swiper-slide .boxHover.s .TextHover .hideBox a {
+      margin-bottom: 20px;
+    }
+    // about us
+    .aboutUs {
+      max-height: unset;
+      flex-direction: column;
+      padding: 20px 0 0;
+      .aboutTextBox {
+        width: calc(100% - 30px);
+      }
+      .aboutImgBox {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+    .aboutUs .aboutTextBox .boxInner h3 {
+      padding: 15px 0 5px 0;
+    }
+    .aboutUs .aboutTextBox .boxInner p {
+      padding-bottom: 20px;
+    }
+    .joinSafe .boxText {
+      padding: 50px 0;
+      min-height: auto;
+    }
+    .joinSafe .boxText a {
+      padding: 10px 30px;
+      width: 180px;
+    }
+    .SocialMedia {
+      padding: 60px 0;
+      width: 100%;
+    }
+    .SocialMedia .boxMedia {
+      margin-bottom: 35px;
+      flex-direction: column;
+    }
+    .SocialMedia .boxMedia .logoMedia img {
+      transform: unset;
+    }
+    .mapSection .btns {
+      // padding-top: 0;
+      flex-direction: column;
+    }
+    .mapSection .btns a {
+      margin-bottom: 10px;
+    }
+    .mapSection .mapImg {
+      height: 195px;
+    }
+    .mapSection .mapImg .egle {
+      img {
+        width: 100px;
+      }
+    }
+    .mapSection .mapImg.Central .egle {
+      top: 17%;
+      left: 38%;
+    }
+    .mapSection .mapImg.Northern .egle {
+      top: -13%;
+      left: 15%;
+    }
+    .mapSection .mapImg.Western .egle {
+      top: 25%;
+      left: 23%;
+    }
+    .mapSection .mapImg.Eastern .egle {
+      top: 18%;
+    }
+    .mapSection .mapImg.Southern .egle {
+      bottom: 23%;
+      right: 23%;
+    }
+    .selectorSec {
+      padding: 50px 0 0 0;
+    }
+    .selectorSec .mainBox h2 {
+      margin-bottom: 60px;
+    }
+    .selectorSec .mainBox .boxRow4.boxRow2,
+    .selectorSec .mainBox .boxRow4 {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0;
+      .box {
+        margin-bottom: 30px;
+      }
+    }
+    .selectorSec .mainBox .boxRow4 .showBx.modelCum {
+      //    height: auto;
+      .hideBX {
+        // height: auto;
+        grid-template-columns: 1fr;
+        .prag {
+          padding: 0 15px 20px 15px;
+        }
+        a {
+          top: 20px;
+          left: unset;
+          right: 0;
+          width: 50px;
+          height: 50px;
+          img {
+            width: 18px;
+          }
+        }
+      }
+      .intState {
+        left: 15px;
+      }
+    }
+    .Commercial.fire,
+    .SportsMass.fire,
+    .Governmental.fire,
+    .residential.fire,
+    .Airports.fire,
+    .spmarCities.fire {
+      transition: animation 3s;
+      animation: myshipMob 1s alternate forwards;
+    }
+    .SolutionsSec .swiper-slide .boxHover.s .TextHover {
+      margin-top: 0;
+    }
+  
+    .SolutionsSec
+      .swiper-solutions
+      .swiper-wrapper
+      > .swiper-slide-active
+      .boxHover.s
+      .TextHover
+      h2 {
+      animation: unset !important;
+    }
+    // contact us
+    .scrollMap {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .scrollMap .contactDiv {
+      padding: 30px 15px 40px 15px;
+    }
+  
+    .scrollMap .contactDiv .linksFooter li:first-of-type {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+  
+    .contactMap .container .row > .boxForm {
+      flex: 0 0 95%;
+      max-width: 95%;
+      padding: 0 20px 50px 20px;
+    }
+    .contactMap .container .row > .boxForm h2 {
+      font-size: 40px;
+      margin-left: -20px;
+    }
+    .contactMap .container .row > .boxForm button {
+      margin-top: 30px;
+      width: 100%;
+    }
+    .innerBanner {
+        // padding-top: 160px;
+        min-height: 500px;
+        .textBN {
+            width: 100%;
+            .headingTitlePX45 {
+                font-size: 34px;
+            }
+            .textPra20px {
+                padding: 10px 0 10px;
+                font-size: 16px;
+            }
+        }
+    }
+    .formTabsCarees .TabsCR {
+        padding: 48px 0% 38px;
+    }
+    footer {
+      text-align: center;
+      .logoFoter0 {
+        img {
+          margin-left: 0;
+          margin-bottom: 20px;
+        }
+      }
+      .logoFoter {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .linksFooter li a {
+        justify-content: center;
+      }
+      .col-md-2.text-right {
+        text-align: center !important;
+        margin-top: 21px;
+      }
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 770px) {
+    .mapSection .mapImg {
+      width: 400px;
+      margin: 0 auto;
+    }
+    .mapSection .mapImg .egle img {
+      width: 100px;
+    }
+  }
+  
