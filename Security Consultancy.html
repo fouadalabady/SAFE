@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/swiper.min.css" />
     <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <title>Home</title>
@@ -326,7 +328,7 @@
                     <div class="col-lg-2">
                         <div class="Consultancy_services--content-item">
                             
-                            <img src="assets/images/solutions/plan.svg" alt="">
+                            <img src="assets/images/solutions/plane.svg" alt="">
 
                             <p>
                                 Airports and Seaports 
@@ -425,6 +427,121 @@
                 Testimonials
             </h2>
 
+            <div class="testimonials-slider">
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                        <div id="testimonials" class="testimonials-slider-body owl-carousel owl-theme">
+ 
+                            <div class="item">
+                                <div class="item-box text-center">
+
+                                    <p class="item-box-text">
+
+                                        <span>
+                                            "
+                                        </span>
+
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+                                        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam 
+                                        erat, At vero ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+                                        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.<span>"</span>
+                                    </p>
+
+
+                                    <div class="item-box-info">
+                                        <img class="item-box-info-avi" src="assets/images/solutions/testimonials/avi-1.jpg" alt="">
+                                        <h4 class="item-box-info-name">
+                                            Ahmed Khaled
+                                        </h4>
+
+                                        <p class="item-box-info-title">
+                                            Investor,Developer,organizer
+                                        </p>
+                                    </div>
+    
+                                   
+
+                                </div>
+
+                            </div>
+
+                            <div class="item">
+                                <div class="item-box text-center">
+
+                                    <p class="item-box-text">
+
+                                        <span>
+                                            "
+                                        </span>
+
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+                                        
+                                        erat, At vero ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+                                        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.<span>"</span>
+                                    </p>
+
+
+                                    <div class="item-box-info">
+                                        <img class="item-box-info-avi" src="assets/images/solutions/testimonials/avi-1.jpg" alt="">
+                                        <h4 class="item-box-info-name">
+                                            Ahmed Khaled
+                                        </h4>
+
+                                        <p class="item-box-info-title">
+                                            Investor,Developer,organizer
+                                        </p>
+                                    </div>
+    
+                                   
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="item">
+                                <div class="item-box text-center">
+
+                                    <p class="item-box-text">
+
+                                        <span>
+                                            "
+                                        </span>
+
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+                                        
+                                        erat, At vero ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor gna aliquyam.<span>"</span>
+                                    </p>
+
+
+                                    <div class="item-box-info">
+                                        <img class="item-box-info-avi" src="assets/images/solutions/testimonials/avi-1.jpg" alt="">
+                                        <h4 class="item-box-info-name">
+                                            Ahmed Khaled
+                                        </h4>
+
+                                        <p class="item-box-info-title">
+                                            Investor,Developer,organizer
+                                        </p>
+                                    </div>
+    
+                                   
+
+                                </div>
+
+                            </div>
+
+    
+                           
+                          </div>
+                    </div>
+
+
+                </div>
+            </div>
+
 
 
 
@@ -452,7 +569,7 @@
 
 
      <!-- Start footer -->
-     <footer>
+     <footer class="top-up-"> // to fix the positining 
          <div class="container">
              <div class="row">
                  <div class="col-md-2">
@@ -582,9 +699,31 @@
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
     <script>
         AOS.init();
-      </script>
+
+
+        $(document).ready(function() {
+ 
+            $("#testimonials").owlCarousel({
+
+                nav: true, // Show next and prev buttons
+                slideSpeed : 300,
+                paginationSpeed : 400,
+                items : 1, 
+                itemsDesktop : false,
+                itemsDesktopSmall : false,
+                itemsTablet: false,
+                itemsMobile : false
+
+            });
+
+        });
+
+
+
+    </script>
 </body>
 
 </html>

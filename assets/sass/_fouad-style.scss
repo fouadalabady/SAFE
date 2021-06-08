@@ -1157,7 +1157,7 @@ $overlay:linear-gradient(270deg, #2529380D 0%, #1C1F2AF7 100%);
         width: 100%;
         padding: 135px 0;
         position: relative;
-        top: -69px /* 45px + 24px  */;
+        bottom: 69px /* 45px + 24px  */;
         z-index: 1;
 
         background-image: url("../images/solutions/services-bg.png");
@@ -1384,9 +1384,8 @@ layout compenets
     width: 100%;
     padding: 70px 0;
     position: relative;
-    top: -69px /* 45px + 24px  */;
+    bottom: 69px /* 45px + 24px  */;
     z-index: 1;
-    height: 100vh;
     background-image: url("../images/solutions/testimonials-bg.png");
     background-position: center;
     background-size: cover;
@@ -1444,6 +1443,161 @@ layout compenets
     }
 
 
+    &-slider{
+
+
+        &-body{
+
+
+            padding: 48px;
+
+            color: #fff;
+
+
+            .item{
+                color: #fff;
+
+
+                &-box{
+
+                    &-text{
+                        margin-bottom: 80px;
+                        font-size: 21px;
+                        font-family: "Medium", sans-serif;
+                        text-align: justify;
+                        
+                        span{
+                            font-size: 35px;
+                            line-height: 21px;
+                        }
+                    }
+
+                    &-info{
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        &-avi{
+                            width: 75px !important;
+                            height: 75px;
+                            background-color: #fff;
+                            border-radius: 50%; 
+                            box-shadow: 0px 6px 15px #1C1F2A03;
+                            margin-bottom: 24px;
+                            
+                        }
+
+                        &-name{
+                            font-size: 18px;
+                            font-family: "Regular",sans-serif;
+                            margin-bottom: 12px;
+                        }
+
+                        &-title{
+                            font-size: 14px;
+                            font-family: "Regular",sans-serif;
+                            opacity: 0.5;
+                            margin-bottom: 0px;
+                        }
+
+                    }
+
+
+
+
+                }
+
+            }
+
+
+
+            .owl-nav{
+
+                :focus{
+                    outline: none !important;
+                    
+                }
+
+                margin: 0 !important;
+                padding:0 !important ;
+                max-height: 30px;
+
+                &[class*=owl-]:hover{
+                    background: none  !important;
+                }
+
+
+                button{
+                    font-size: 30px !important;
+                    margin-top: 0 !important;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 30px !important;
+                    &.owl-prev{
+                        
+                    }
+
+
+                    &.owl-next{
+                        
+                    }
+
+                    span{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        max-height: 30px;
+                        
+                    }
+
+                }
+
+            }
+
+
+            .owl-dots{
+
+                .owl-dot{
+
+                    &.active{
+                        span{
+                            background-color:rgba($mainColor,1);
+                        }
+                    }
+
+                    
+
+                    span{
+                        background-color: #FFFFFF;
+
+                        &:hover{
+                            opacity: 0.8;
+                        }
+                    }
+
+                    &:focus{
+                        outline: none;
+                    }
+                }
+
+
+            }
+
+        }
+
+
+
+
+
+    }
+
+    .owl-theme .owl-nav [class*=owl-]:hover {
+        background: none;
+        color: #FFF;
+        text-decoration: none;
+    }
 
 
 
@@ -1452,5 +1606,15 @@ layout compenets
 
 
 }
+
+
+
+.top-up-{
+    position: relative;
+    bottom: 69px;
+}
+
+
+
 
 
